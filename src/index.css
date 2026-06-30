@@ -67,7 +67,7 @@ body {
   font-family: var(--font-body);
   font-size: var(--fs-base);
   line-height: var(--lh-normal);
-  background-image: url(/public/roses-wallpaper-1.jpg);
+  background-image: url(/roses-wallpaper-1.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   color: var(--black);
@@ -246,7 +246,7 @@ body {
   width: 64px;
   height: 64px;
   border-radius: 50%;
-  background: url(/public/wax.png) center/cover no-repeat;
+  background: url(/wax.png) center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
