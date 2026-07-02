@@ -21,7 +21,7 @@ export default function VenueMap({ venue }) {
         viewport={{ once: true }}
         transition={{ duration: 0.7 }}
       >
-        <span className="section-tag">مكان الحفل</span>
+        <h1 className="section-tag">مكان الحفل</h1>
         <p className="venue-address">
           {venue.name} · {venue.address}
         </p>
@@ -34,20 +34,7 @@ export default function VenueMap({ venue }) {
         viewport={{ once: true }}
         transition={{ duration: 0.8, delay: 0.2 }}
       >
-        <MapContainer
-          center={[venue.lat, venue.lng]}
-          zoom={15}
-          style={{ height: "380px", width: "100%", borderRadius: "16px" }}
-          scrollWheelZoom={false}
-        >
-          <TileLayer
-            attribution="&copy; OpenStreetMap"
-            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-          />
-          <Marker position={[venue.lat, venue.lng]}>
-            <Popup>{venue.name}</Popup>
-          </Marker>
-        </MapContainer>
+        <img src="/map.png" alt="map" />
       </motion.div>
 
       <a

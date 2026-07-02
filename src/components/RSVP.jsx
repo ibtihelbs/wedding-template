@@ -1,8 +1,8 @@
-import { useState } from 'react';
-import { motion } from 'framer-motion';
+import { useState } from "react";
+import { motion } from "framer-motion";
 
 export default function RSVP({ rsvpDeadline }) {
-  const [form, setForm] = useState({ name: '', count: '1', attending: 'yes' });
+  const [form, setForm] = useState({ name: "", count: "1", attending: "yes" });
   const [submitted, setSubmitted] = useState(false);
 
   function handleChange(e) {
@@ -24,7 +24,7 @@ export default function RSVP({ rsvpDeadline }) {
         viewport={{ once: true }}
         transition={{ duration: 0.8 }}
       >
-        <span className="section-tag">تأكيد الحضور</span>
+        <h1 className="section-tag">تأكيد الحضور</h1>
         <p className="rsvp-deadline">يرجى الرد قبل {rsvpDeadline}</p>
 
         {submitted ? (
@@ -52,8 +52,10 @@ export default function RSVP({ rsvpDeadline }) {
             <div className="field">
               <label>عدد الأشخاص</label>
               <select name="count" value={form.count} onChange={handleChange}>
-                {[1, 2, 3, 4, 5].map(n => (
-                  <option key={n} value={n}>{n}</option>
+                {[1, 2, 3, 4, 5].map((n) => (
+                  <option key={n} value={n}>
+                    {n}
+                  </option>
                 ))}
               </select>
             </div>
@@ -62,11 +64,23 @@ export default function RSVP({ rsvpDeadline }) {
               <label>هل ستحضر؟</label>
               <div className="radio-group">
                 <label>
-                  <input type="radio" name="attending" value="yes" checked={form.attending === 'yes'} onChange={handleChange} />
+                  <input
+                    type="radio"
+                    name="attending"
+                    value="yes"
+                    checked={form.attending === "yes"}
+                    onChange={handleChange}
+                  />
                   نعم، سأكون هناك 🎉
                 </label>
                 <label>
-                  <input type="radio" name="attending" value="no" checked={form.attending === 'no'} onChange={handleChange} />
+                  <input
+                    type="radio"
+                    name="attending"
+                    value="no"
+                    checked={form.attending === "no"}
+                    onChange={handleChange}
+                  />
                   للأسف لن أتمكن من الحضور
                 </label>
               </div>

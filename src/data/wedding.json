@@ -22,9 +22,29 @@
     "reference": "سورة الروم — الآية 21"
   },
   "schedule": [
-    { "time": "19:00", "label": "استقبال الضيوف", "icon": "🌸" },
-    { "time": "20:30", "label": "العشاء", "icon": "🍽" },
-    { "time": "22:00", "label": "السهرة والرقص", "icon": "💃" },
-    { "time": "00:00", "label": "تقطيع الكعكة", "icon": "🎂" }
+    {
+      "time": "19:00",
+      "label": "استقبال الضيوف",
+      "image": "placeholder.png",
+      "icon": "🌸"
+    },
+    {
+      "time": "20:30",
+      "label": "العشاء",
+      "image": "placeholder.png",
+      "icon": "🍽"
+    },
+    {
+      "time": "22:00",
+      "label": "السهرة والرقص",
+      "image": "placeholder.png",
+      "icon": "💃"
+    },
+    {
+      "time": "00:00",
+      "label": "تقطيع الكعكة",
+      "image": "placeholder.png",
+      "icon": "🎂"
+    }
   ]
 }

@@ -6,15 +6,14 @@ import Schedule from "./components/Schedule";
 import VenueMap from "./components/VenueMap";
 import RSVP from "./components/RSVP";
 import "./index.css";
-
+import { motion } from "framer-motion";
 export default function App() {
   const { couple, event, verse, schedule } = weddingData;
 
   return (
     <div className="app" dir="rtl">
       <Navbar bride={couple.bride} groom={couple.groom} />
-      <Envelope couple={couple} event={event} />
-      <Verse verse={verse} />
+      <Envelope couple={couple} event={event} verse={verse} />
       <Schedule schedule={schedule} />
       <VenueMap venue={event.venue} />
       <RSVP rsvpDeadline={event.rsvpDeadline} />

@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 
 export default function Story({ couple }) {
   return (
@@ -10,9 +10,11 @@ export default function Story({ couple }) {
         viewport={{ once: true }}
         transition={{ duration: 0.8 }}
       >
-        <span className="section-tag">قصتنا</span>
+        <h1 className="section-tag">قصتنا</h1>
         <p className="story-text">{couple.story}</p>
-        <div className="divider">— {couple.bride} & {couple.groom} —</div>
+        <div className="divider">
+          — {couple.bride} & {couple.groom} —
+        </div>
       </motion.div>
     </section>
   );

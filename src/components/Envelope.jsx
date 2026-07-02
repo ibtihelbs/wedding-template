@@ -2,7 +2,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useCountdown } from "../hooks/useCountdown";
 
-export default function Envelope({ couple, event }) {
+export default function Envelope({ couple, event, verse }) {
   const [opened, setOpened] = useState(false);
   const { days, hours, minutes, seconds } = useCountdown(event.date);
 
@@ -35,11 +35,22 @@ export default function Envelope({ couple, event }) {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
+            <div className="verse-card">
+              <img
+                className="ornament"
+                src="/ornament.png"
+                alt="ornament-top"
+              />
+
+              <p className="verse-text">{verse.arabic}</p>
+              <span className="verse-ref">{verse.reference}</span>
+              <img className="ornament" src="/ornament.png" alt="ornament" />
+            </div>
             <span className="eyebrow">يدعوانكم لمشاركة أجمل يوم في حياتهم</span>
 
             <div className="hero-names">
-              <span className="name-script">{couple.bride}</span>
-              <span className="name-amp">&</span>
+              <span className="name-display">{couple.bride}</span>
+              <span className="name-display">&</span>
               <span className="name-display">{couple.groom}</span>
             </div>
 
@@ -53,10 +64,10 @@ export default function Envelope({ couple, event }) {
 
             <div className="countdown">
               {[
-                { val: days, label: "يوم" },
-                { val: hours, label: "ساعة" },
-                { val: minutes, label: "دقيقة" },
                 { val: seconds, label: "ثانية" },
+                { val: minutes, label: "دقيقة" },
+                { val: hours, label: "ساعة" },
+                { val: days, label: "يوم" },
               ].map(({ val, label }) => (
                 <div className="count-box" key={label}>
                   <span className="count-num">

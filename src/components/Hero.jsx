@@ -34,7 +34,7 @@ export default function Hero({ couple, event }) {
 
         <motion.div className="countdown" {...fadeUp(0.8)}>
           {[
-            { val: seconds, label: "ثانية" },
+            { val: seconds, label: "ثbbbbbbbانية" },
             { val: minutes, label: "دقيقة" },
             { val: hours, label: "ساعة" },
             { val: days, label: "يوم" },
