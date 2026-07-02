@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Tajawal:wght@300;400;500&family=Pinyon+Script&display=swap");
 @font-face {
   font-family: "palestine";
-  src: url(/Palestine-Regular.otf) format(opentypefont);
+  src: url(/Palestine-Regular.otf) format(opentype);
 }
 *,
 *::before,
@@ -469,7 +469,16 @@ h1 {
   color: var(--green-deep);
   margin-top: 0.5rem;
 }
-
+.paper-image {
+  height: 100%;
+  width: 100vw;
+  -webkit-mask-image: url("mask.svg");
+  -webkit-mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  mask-image: url("mask.svg");
+  mask-size: contain;
+  mask-repeat: no-repeat;
+}
 /* ── SCHEDULE ── */
 .schedule {
   position: relative;
