@@ -38,7 +38,7 @@ export default function VenueMap({ venue }) {
       </motion.div>
 
       <a
-        className="btn-outline"
+        className="btn-primary"
         href={`https://www.google.com/maps/dir/?api=1&destination=${venue.lat},${venue.lng}`}
         target="_blank"
         rel="noreferrer"
