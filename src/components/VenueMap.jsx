@@ -43,7 +43,7 @@ export default function VenueMap({ venue }) {
         target="_blank"
         rel="noreferrer"
       >
-        📍 افتح في خرائط Google
+        📍 افتح في خرائط Google map
       </a>
     </section>
   );
