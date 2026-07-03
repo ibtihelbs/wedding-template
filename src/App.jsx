@@ -23,7 +23,7 @@ export default function App() {
           alignItems: "center",
         }}
       >
-        <img src="paper-2.jpg" alt="paper" className="paper-image" />
+        <img src="/paper-2.jpg" alt="paper" className="paper-image" />
         <div
           className="paper-content"
           style={{
@@ -35,8 +35,8 @@ export default function App() {
           <Schedule schedule={schedule} />
           <VenueMap venue={event.venue} />
         </div>
+        <RSVP rsvpDeadline={event.rsvpDeadline} />
       </div>
-      <RSVP rsvpDeadline={event.rsvpDeadline} />
       <footer className="footer">
         <p>
           💍 {couple.bride} & {couple.groom} · {event.dateDisplay}
