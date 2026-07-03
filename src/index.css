@@ -403,7 +403,7 @@ h1 {
   align-items: center;
   justify-content: center;
   gap: 0.8rem;
-  font-size: clamp(var(--fs-eyebrow), 3vw, var(--fs-2xl));
+  font-size: clamp(var(--fs-2xl), 3vw, var(--fs-eyebrow));
   letter-spacing: var(--ls-widest);
   color: var(--green-deep);
   text-transform: uppercase;
@@ -472,10 +472,10 @@ h1 {
 .paper-image {
   height: 100%;
   width: 100vw;
-  -webkit-mask-image: url("mask.svg");
+  -webkit-mask-image: url("/mask.svg");
   -webkit-mask-size: contain;
   -webkit-mask-repeat: no-repeat;
-  mask-image: url("mask.svg");
+  mask-image: url("/mask.svg");
   mask-size: contain;
   mask-repeat: no-repeat;
 }
